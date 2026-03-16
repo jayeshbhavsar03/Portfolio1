@@ -1,0 +1,148 @@
+.reviews-section {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.reviews-container h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: #fff;
+  /* text-transform: uppercase; */
+  margin-bottom: 20px;
+}
+
+.reviews-container h2 span {
+  color: #5eead4;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(94, 234, 212, 0.3);
+}
+
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+.review-image {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #5eead4;
+  flex-shrink: 0;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.review-info h3 {
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.review-position {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  color: #a3a3a3;
+  margin: 0;
+}
+
+.review-company {
+  font-family: "Geist", sans-serif;
+  font-size: 13px;
+  color: #5eead4;
+  margin: 4px 0 0 0;
+  font-weight: 600;
+}
+
+.review-linkedin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+}
+
+.review-linkedin:hover {
+  transform: translateY(-2px);
+  color: var(--backgroundColor, #5eead4);
+}
+
+.review-content {
+  font-family: "Geist", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #d4d4d4;
+  font-style: italic;
+  position: relative;
+}
+
+.review-content::before {
+  content: '"';
+  font-size: 40px;
+  color: rgba(94, 234, 212, 0.2);
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  font-family: serif;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-container h2 {
+    font-size: 45px;
+  }
+}

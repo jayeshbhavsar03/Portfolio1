@@ -1,0 +1,56 @@
+.techstack-marquee-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.tech-marquee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px;
+  padding: 20px 0; /* Prevents cropping during hover */
+  gap: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.tech-marquee-item:hover {
+  transform: scale(1.15);
+}
+
+.tech-marquee-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tech-marquee-item span {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #eae5ec;
+}
+
+@media (max-width: 900px) {
+  .tech-marquee-item img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .tech-marquee-item {
+    margin: 0 20px;
+  }
+  
+  .tech-marquee-item span {
+    font-size: 12px;
+  }
+}
